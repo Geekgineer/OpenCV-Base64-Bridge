@@ -1,4 +1,6 @@
 // base64.hpp
+// Abdarhman Ibrahim, abdalrahman.m5959@gmail.com
+
 #ifndef BASE64_HPP
 #define BASE64_HPP
 
@@ -85,7 +87,7 @@ public:
         if (clean_encoded_string.length() % 4 != 0) {
             throw std::invalid_argument("Invalid Base64 input length.");
         }
-        
+
         std::vector<uchar> ret;
         int bits_collected = 0;
         unsigned int accumulator = 0;

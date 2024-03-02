@@ -36,11 +36,11 @@ This project provides a C++ library for encoding and decoding images using the B
 ### Encoding an Image to Base64
 
 ```cpp
+
 cv::Mat image = cv::imread("path/to/your/image.png", cv::IMREAD_COLOR);
 std::string encodedImage = Base64::encodeMat(image);
-Decoding a Base64 String to an Image
-cpp
-Copy code
+
+//Decoding a Base64 String to an Image
 auto decodedImageOpt = Base64::decodeToMat(encodedImage);
 if (decodedImageOpt) {
     cv::Mat decodedImage = *decodedImageOpt;
